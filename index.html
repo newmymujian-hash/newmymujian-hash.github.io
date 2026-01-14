@@ -3,28 +3,449 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人主页</title>
+    <title>个人主页 | Personal Homepage</title>
     <style>
-        body { font-family: -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
-        h1 { color: #007aff; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .contact { background: #f9f9f9; padding: 15px; border-radius: 8px; margin-top: 20px; }
-        footer { margin-top: 50px; font-size: 0.8em; color: #888; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .lang-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .lang-switcher button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 16px;
+            margin: 0 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .lang-switcher button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .lang-switcher button.active {
+            background: white;
+            color: #667eea;
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 5px;
+            height: 30px;
+            background: #667eea;
+            border-radius: 3px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+
+        .contact-item strong {
+            color: #667eea;
+            min-width: 80px;
+        }
+
+        .contact-item a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e0e0e0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -25px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #667eea;
+        }
+
+        .timeline-date {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .timeline-desc {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .skill-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .publication-list {
+            list-style: none;
+        }
+
+        .publication-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+
+        .publication-item:hover {
+            transform: translateX(5px);
+        }
+
+        .publication-title {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .publication-meta {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+
+            .name {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .lang-switcher {
+                position: static;
+                margin-bottom: 20px;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>你好，我是 [你的名字]</h1>
-    <p>这是一段关于我的介绍。你可以利用 Cursor 的 AI 功能，在这里填入你的职业经历、兴趣爱好或个人作品。</p>
-    
-    <div class="contact">
-        <h3>联系方式</h3>
-        <ul>
-            <li>邮箱：yourname@example.com</li>
-            <li>GitHub: <a href="https://github.com/newmymujian-hash">newmymujian-hash</a></li>
-        </ul>
+    <div class="container">
+        <div class="header">
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="switchLang('zh')">中文</button>
+                <button class="lang-btn" onclick="switchLang('en')">English</button>
+            </div>
+            <div class="profile-section">
+                <div class="profile-image">
+                    <!-- 在这里放置你的头像图片 -->
+                    <!-- <img src="your-photo.jpg" alt="Profile Photo"> -->
+                    <span>照片</span>
+                </div>
+                <div>
+                    <h1 class="name" data-zh="[你的姓名]" data-en="[Your Name]">[你的姓名]</h1>
+                    <p class="title" data-zh="[你的职位/头衔]" data-en="[Your Title]">[你的职位/头衔]</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- 联系方式 -->
+            <section class="section">
+                <h2 class="section-title" data-zh="联系方式" data-en="Contact Information">联系方式</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong data-zh="姓名" data-en="Name">姓名</strong>
+                        <span data-zh="[你的姓名]" data-en="[Your Name]">[你的姓名]</span>
+                    </div>
+                    <div class="contact-item">
+                        <strong data-zh="邮箱" data-en="Email">邮箱</strong>
+                        <a href="mailto:yourname@example.com" data-zh="yourname@example.com" data-en="yourname@example.com">yourname@example.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong data-zh="电话" data-en="Phone">电话</strong>
+                        <span data-zh="[你的电话]" data-en="[Your Phone]">[你的电话]</span>
+                    </div>
+                    <div class="contact-item">
+                        <strong data-zh="地址" data-en="Address">地址</strong>
+                        <span data-zh="[你的地址]" data-en="[Your Address]">[你的地址]</span>
+                    </div>
+                    <div class="contact-item">
+                        <strong>GitHub</strong>
+                        <a href="https://github.com/newmymujian-hash" target="_blank">newmymujian-hash</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>LinkedIn</strong>
+                        <a href="#" target="_blank" data-zh="[你的LinkedIn]" data-en="[Your LinkedIn]">[你的LinkedIn]</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 教育经历 -->
+            <section class="section">
+                <h2 class="section-title" data-zh="教育经历" data-en="Education">教育经历</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date" data-zh="2018 - 2022" data-en="2018 - 2022">2018 - 2022</div>
+                        <div class="timeline-title" data-zh="[学位] - [专业]" data-en="[Degree] - [Major]">[学位] - [专业]</div>
+                        <div class="timeline-desc" data-zh="[学校名称]" data-en="[University Name]">[学校名称]</div>
+                        <div class="timeline-desc" data-zh="[相关描述或成就]" data-en="[Relevant description or achievements]">[相关描述或成就]</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date" data-zh="2014 - 2018" data-en="2014 - 2018">2014 - 2018</div>
+                        <div class="timeline-title" data-zh="[学位] - [专业]" data-en="[Degree] - [Major]">[学位] - [专业]</div>
+                        <div class="timeline-desc" data-zh="[学校名称]" data-en="[University Name]">[学校名称]</div>
+                        <div class="timeline-desc" data-zh="[相关描述或成就]" data-en="[Relevant description or achievements]">[相关描述或成就]</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 工作经历 -->
+            <section class="section">
+                <h2 class="section-title" data-zh="工作经历" data-en="Work Experience">工作经历</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date" data-zh="2022 - 至今" data-en="2022 - Present">2022 - 至今</div>
+                        <div class="timeline-title" data-zh="[职位名称]" data-en="[Job Title]">[职位名称]</div>
+                        <div class="timeline-desc" data-zh="[公司名称]" data-en="[Company Name]">[公司名称]</div>
+                        <div class="timeline-desc" data-zh="[工作描述和主要职责]" data-en="[Job description and main responsibilities]">[工作描述和主要职责]</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date" data-zh="2020 - 2022" data-en="2020 - 2022">2020 - 2022</div>
+                        <div class="timeline-title" data-zh="[职位名称]" data-en="[Job Title]">[职位名称]</div>
+                        <div class="timeline-desc" data-zh="[公司名称]" data-en="[Company Name]">[公司名称]</div>
+                        <div class="timeline-desc" data-zh="[工作描述和主要职责]" data-en="[Job description and main responsibilities]">[工作描述和主要职责]</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 文章发表 -->
+            <section class="section">
+                <h2 class="section-title" data-zh="文章发表" data-en="Publications">文章发表</h2>
+                <ul class="publication-list">
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="[文章标题 1]" data-en="[Publication Title 1]">[文章标题 1]</div>
+                        <div class="publication-meta" data-zh="[期刊/会议名称], [年份]" data-en="[Journal/Conference Name], [Year]">[期刊/会议名称], [年份]</div>
+                        <div class="publication-meta" data-zh="[作者列表]" data-en="[Author List]">[作者列表]</div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="[文章标题 2]" data-en="[Publication Title 2]">[文章标题 2]</div>
+                        <div class="publication-meta" data-zh="[期刊/会议名称], [年份]" data-en="[Journal/Conference Name], [Year]">[期刊/会议名称], [年份]</div>
+                        <div class="publication-meta" data-zh="[作者列表]" data-en="[Author List]">[作者列表]</div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 专长 -->
+            <section class="section">
+                <h2 class="section-title" data-zh="专长" data-en="Skills & Expertise">专长</h2>
+                <div class="skills-grid">
+                    <div class="skill-item" data-zh="[技能 1]" data-en="[Skill 1]">[技能 1]</div>
+                    <div class="skill-item" data-zh="[技能 2]" data-en="[Skill 2]">[技能 2]</div>
+                    <div class="skill-item" data-zh="[技能 3]" data-en="[Skill 3]">[技能 3]</div>
+                    <div class="skill-item" data-zh="[技能 4]" data-en="[Skill 4]">[技能 4]</div>
+                    <div class="skill-item" data-zh="[技能 5]" data-en="[Skill 5]">[技能 5]</div>
+                    <div class="skill-item" data-zh="[技能 6]" data-en="[Skill 6]">[技能 6]</div>
+                </div>
+            </section>
+        </div>
     </div>
 
-    <footer>
-        © 2026 由 GitHub Pages 托管发布
-    </footer>
+    <script>
+        let currentLang = 'zh';
+
+        function switchLang(lang) {
+            currentLang = lang;
+            
+            // 更新按钮状态
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // 更新所有带有 data-zh 和 data-en 属性的元素
+            document.querySelectorAll('[data-zh][data-en]').forEach(element => {
+                element.textContent = element.getAttribute(`data-${lang}`);
+            });
+            
+            // 更新页面标题
+            if (lang === 'zh') {
+                document.title = '个人主页 | Personal Homepage';
+            } else {
+                document.title = 'Personal Homepage | 个人主页';
+            }
+        }
+
+        // 初始化：确保所有元素显示中文
+        document.addEventListener('DOMContentLoaded', function() {
+            switchLang('zh');
+        });
+    </script>
 </body>
 </html>
