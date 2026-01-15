@@ -71,28 +71,6 @@
             gap: 20px;
         }
 
-        .profile-image {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 5px solid white;
-            object-fit: cover;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            background: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-size: 14px;
-        }
-
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
         .name {
             font-size: 2.5em;
             font-weight: 700;
@@ -303,11 +281,6 @@
                 <button class="lang-btn" onclick="switchLang('en')">English</button>
             </div>
             <div class="profile-section">
-                <div class="profile-image">
-                    <!-- 在这里放置你的头像图片 -->
-                    <!-- <img src="your-photo.jpg" alt="Profile Photo"> -->
-                    <span>照片</span>
-                </div>
                 <div>
                     <h1 class="name" data-zh="母健" data-en="Mu Jian">母健</h1>
                     <p class="title" data-zh="市场部总监" data-en="Director of Marketing">市场部总监</p>
@@ -316,6 +289,15 @@
         </div>
 
         <div class="content">
+            <!-- 个人简介 -->
+            <section class="section">
+                <h2 class="section-title" data-zh="个人简介" data-en="Profile">个人简介</h2>
+                <p
+                    data-zh="（中文简介待补充）"
+                    data-en="Economist and credit‑market specialist with over ten years of rigorous academic training in macroeconomics, consumption theory, and financial theory, and more than fifteen years of professional experience across credit rating, bond issuance, interest‑rate bond investment, and macroeconomic research. Strong track record in developing rating methodologies, leading research projects, advising financial institutions, and delivering stable investment performance for small and medium‑sized banks. Published seven academic papers, including core‑journal and CSSCI‑indexed articles, and contributed to multiple national and provincial research projects."
+                >（中文简介待补充）</p>
+            </section>
+
             <!-- 联系方式 -->
             <section class="section">
                 <h2 class="section-title" data-zh="联系方式" data-en="Contact Information">联系方式</h2>
@@ -344,12 +326,14 @@
                 <h2 class="section-title" data-zh="教育经历" data-en="Education">教育经历</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-title" data-zh="经济学博士" data-en="Ph.D. in Economics">经济学博士</div>
+                        <div class="timeline-title" data-zh="经济学博士" data-en="PhD in Economics">经济学博士</div>
                         <div class="timeline-desc" data-zh="中国人民大学" data-en="Renmin University of China">中国人民大学</div>
+                        <div class="timeline-desc" data-zh="" data-en="Dissertation: Transformation of Consumption Patterns in China’s Marketization Process (2011)"></div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-title" data-zh="经济学硕士" data-en="Master of Economics">经济学硕士</div>
                         <div class="timeline-desc" data-zh="西北师范大学" data-en="Northwest Normal University">西北师范大学</div>
+                        <div class="timeline-desc" data-zh="" data-en="Thesis awarded Outstanding Master’s Thesis (2006)"></div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-title" data-zh="经济学学士" data-en="Bachelor of Economics">经济学学士</div>
@@ -365,46 +349,96 @@
                     <div class="timeline-item">
                         <div class="timeline-date" data-zh="2022/11 - 至今" data-en="2022/11 - Present">2022/11 - 至今</div>
                         <div class="timeline-title" data-zh="市场部总监" data-en="Director of Marketing">市场部总监</div>
-                        <div class="timeline-desc" data-zh="普策信用评价有限公司" data-en="GuangZhou Philomax Credit Rating Co., Ltd">普策信用评价有限公司</div>
-                        <div class="timeline-desc" data-zh="负责公司评级和咨询业务的市场推广，开发潜在客户、初步判断项目可行性并维护客户关系；负责遴选金融数据提供商和软件，与软件提供商进行价格谈判；参与运维公司微信公众号，维护公共关系，保持公司良好形象。" data-en="Responsible for the selection of financial data providers and software; Price negotiation with software providers; Responsible for the marketing of the company's rating and consulting business; Developing potential customers, preliminarily judging the feasibility of projects and maintaining customer relations; Maintain public relations, and maintain a good image of the company.">负责公司评级和咨询业务的市场推广，开发潜在客户、初步判断项目可行性并维护客户关系；负责遴选金融数据提供商和软件，与软件提供商进行价格谈判；参与运维公司微信公众号，维护公共关系，保持公司良好形象。</div>
+                        <div class="timeline-desc" data-zh="普策信用评价有限公司" data-en="Guangzhou Philomax Credit Rating Co., Ltd.">普策信用评价有限公司</div>
+                        <div class="timeline-desc" data-zh="负责公司评级和咨询业务的市场推广，开发潜在客户、初步判断项目可行性并维护客户关系；负责遴选金融数据提供商和软件，与软件提供商进行价格谈判；参与运维公司微信公众号，维护公共关系，保持公司良好形象。" data-en="Lead marketing strategy for rating and consulting services; develop new clients and assess project feasibility. Manage relationships with financial data providers; conduct price negotiations and vendor selection. Support corporate communications, including WeChat official account operations and public‑relations maintenance. Promote the company’s brand and maintain strong external partnerships.">负责公司评级和咨询业务的市场推广，开发潜在客户、初步判断项目可行性并维护客户关系；负责遴选金融数据提供商和软件，与软件提供商进行价格谈判；参与运维公司微信公众号，维护公共关系，保持公司良好形象。</div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date" data-zh="2019/01 - 2022/10" data-en="2019/01 - 2022/10">2019/01 - 2022/10</div>
                         <div class="timeline-title" data-zh="执行董事" data-en="Executive Director">执行董事</div>
                         <div class="timeline-desc" data-zh="中达证券投资有限公司" data-en="Central Wealth Securities Investment Ltd">中达证券投资有限公司</div>
-                        <div class="timeline-desc" data-zh="负责开发境内企业在香港发行离岸美元、欧元债券项目，提升公司收入；负责协调和拓展境内外律师、评级机构等中介与债券发行客户的关系；负责外部金融数据终端提供商与公司信息部门的合作关系，保持数据交互稳定。" data-en="Responsible for the development of offshore USD and Euro bond projects issued by domestic enterprises in Hong Kong; Responsible for coordinating and expanding the relationship between lawyers, rating agencies and other intermediaries with bond issuing clients; Responsible for the cooperative relationship between external financial data terminal provider and company information gate, and keep the data interaction stable.">负责开发境内企业在香港发行离岸美元、欧元债券项目，提升公司收入；负责协调和拓展境内外律师、评级机构等中介与债券发行客户的关系；负责外部金融数据终端提供商与公司信息部门的合作关系，保持数据交互稳定。</div>
+                        <div class="timeline-desc" data-zh="负责开发境内企业在香港发行离岸美元、欧元债券项目，提升公司收入；负责协调和拓展境内外律师、评级机构等中介与债券发行客户的关系；负责外部金融数据终端提供商与公司信息部门的合作关系，保持数据交互稳定。" data-en="Developed offshore USD and EUR bond issuance projects for mainland Chinese enterprises in Hong Kong. Coordinated relationships among issuers, law firms, rating agencies, and other intermediaries. Oversaw cooperation between external financial‑data terminals and the company’s IT department to ensure stable data integration.">负责开发境内企业在香港发行离岸美元、欧元债券项目，提升公司收入；负责协调和拓展境内外律师、评级机构等中介与债券发行客户的关系；负责外部金融数据终端提供商与公司信息部门的合作关系，保持数据交互稳定。</div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date" data-zh="2017/02 - 2019/12" data-en="2017/02 - 2019/12">2017/02 - 2019/12</div>
                         <div class="timeline-title" data-zh="副总经理" data-en="Vice President">副总经理</div>
                         <div class="timeline-desc" data-zh="北京泰德信用管理有限公司" data-en="Beijing Taide Credit Management Co., Ltd">北京泰德信用管理有限公司</div>
-                        <div class="timeline-desc" data-zh="负责公司全面管理和公司评级技术制定、维护和执行，包括企业评级报告的审核、企业现场尽职调查、企业信用等级评定会议的组织、行业研究报告和宏观研究报告的撰写和审核等；给员工提供定期培训；全流程参与公司评级自动化信息系统的设计、运营和维护；促成并维护外部金融数据提供商与公司信息技术部门的稳定合作关系。" data-en="Provide regular training to employees; Participate in the design, operation and maintenance of the company's automatic rating information system in the whole process; Facilitate and maintain a stable relationship between external financial data providers and the company's information technology department.">负责公司全面管理和公司评级技术制定、维护和执行，包括企业评级报告的审核、企业现场尽职调查、企业信用等级评定会议的组织、行业研究报告和宏观研究报告的撰写和审核等；给员工提供定期培训；全流程参与公司评级自动化信息系统的设计、运营和维护；促成并维护外部金融数据提供商与公司信息技术部门的稳定合作关系。</div>
+                        <div class="timeline-desc" data-zh="负责公司全面管理和公司评级技术制定、维护和执行，包括企业评级报告的审核、企业现场尽职调查、企业信用等级评定会议的组织、行业研究报告和宏观研究报告的撰写和审核等；给员工提供定期培训；全流程参与公司评级自动化信息系统的设计、运营和维护；促成并维护外部金融数据提供商与公司信息技术部门的稳定合作关系。" data-en="Oversaw full management of rating methodologies, including development, maintenance, and execution. Reviewed corporate rating reports, conducted on‑site due diligence, and organized rating committee meetings. Authored and reviewed industry research and macroeconomic reports. Provided regular staff training and led the design and operation of the company’s automated rating information system. Maintained stable cooperation between external data providers and internal IT teams.">负责公司全面管理和公司评级技术制定、维护和执行，包括企业评级报告的审核、企业现场尽职调查、企业信用等级评定会议的组织、行业研究报告和宏观研究报告的撰写和审核等；给员工提供定期培训；全流程参与公司评级自动化信息系统的设计、运营和维护；促成并维护外部金融数据提供商与公司信息技术部门的稳定合作关系。</div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date" data-zh="2014/07 - 2016/12" data-en="2014/07 - 2016/12">2014/07 - 2016/12</div>
-                        <div class="timeline-title" data-zh="总监" data-en="Manager">总监</div>
+                        <div class="timeline-title" data-zh="总监" data-en="Director, Fixed Income Department">总监</div>
                         <div class="timeline-desc" data-zh="西部证券股份有限公司 | 固定收益部" data-en="Western Securities Co., Ltd | Fixed Income Department">西部证券股份有限公司 | 固定收益部</div>
-                        <div class="timeline-desc" data-zh="主要负责债券发行、申报、销售的业务沟通、方案设计、项目执行以及客户关系维护。" data-en="Mainly responsible for business negotiation and customer relationship maintenance of bond issuance and sales.">主要负责债券发行、申报、销售的业务沟通、方案设计、项目执行以及客户关系维护。</div>
+                        <div class="timeline-desc" data-zh="主要负责债券发行、申报、销售的业务沟通、方案设计、项目执行以及客户关系维护。" data-en="Led communication, structuring, execution, and client management for bond issuance, filing, and sales. Provided professional support for fixed‑income business development.">主要负责债券发行、申报、销售的业务沟通、方案设计、项目执行以及客户关系维护。</div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date" data-zh="2011/03 - 2014/07" data-en="2011/03 - 2014/07">2011/03 - 2014/07</div>
-                        <div class="timeline-title" data-zh="高级分析师" data-en="Senior Analyst">高级分析师</div>
-                        <div class="timeline-desc" data-zh="中诚信国际信用评级有限责任公司 | 评级部、研究咨询部" data-en="China Chengxin International Credit rating Co., Ltd | Rating Department, Research & Consulting Department">中诚信国际信用评级有限责任公司 | 评级部、研究咨询部</div>
-                        <div class="timeline-desc" data-zh="参与信用评级项目，涉及行业涵盖电力、造纸、旅游、房地产、建筑、城投等行业。为三峡集团拟定内部评级方法并提供基础网络运营服务，涵盖电力、建筑和海外项目工程行业；编辑《中诚信研究2012：中国信用评级20年回顾与展望》和《中诚信研究2012：宏观经济、债券市场、行业分析与展望》；"主权信用评级"方法研究；国家负债能力上限研究；《企业扩张与融资》研究（已出版）；中诚信国际刊物《资产证券化手册》编撰；为地方银行的固定收益部和金融市场部提供业务培训和咨询服务。" data-en="Participate in credit rating projects; Formulate internal rating methods and provide basic network operation services for SOE of China; Provide business training and consulting services to the fixed-income department and financial market department of local banks.">参与信用评级项目，涉及行业涵盖电力、造纸、旅游、房地产、建筑、城投等行业。为三峡集团拟定内部评级方法并提供基础网络运营服务，涵盖电力、建筑和海外项目工程行业；编辑《中诚信研究2012：中国信用评级20年回顾与展望》和《中诚信研究2012：宏观经济、债券市场、行业分析与展望》；"主权信用评级"方法研究；国家负债能力上限研究；《企业扩张与融资》研究（已出版）；中诚信国际刊物《资产证券化手册》编撰；为地方银行的固定收益部和金融市场部提供业务培训和咨询服务。</div>
+                        <div class="timeline-title" data-zh="高级分析师" data-en="Senior Analyst, Rating & Research Department">高级分析师</div>
+                        <div class="timeline-desc" data-zh="中诚信国际信用评级有限责任公司 | 评级部、研究咨询部" data-en="China Chengxin International Credit Rating Co., Ltd.">中诚信国际信用评级有限责任公司 | 评级部、研究咨询部</div>
+                        <div class="timeline-desc" data-zh="参与信用评级项目，涉及行业涵盖电力、造纸、旅游、房地产、建筑、城投等行业。为三峡集团拟定内部评级方法并提供基础网络运营服务，涵盖电力、建筑和海外项目工程行业；编辑《中诚信研究2012：中国信用评级20年回顾与展望》和《中诚信研究2012：宏观经济、债券市场、行业分析与展望》；"主权信用评级"方法研究；国家负债能力上限研究；《企业扩张与融资》研究（已出版）；中诚信国际刊物《资产证券化手册》编撰；为地方银行的固定收益部和金融市场部提供业务培训和咨询服务。" data-en="Participated in credit rating projects across power, paper, tourism, real estate, construction, and LGFV sectors. Developed internal rating methodologies for China Three Gorges Group covering power, construction, and overseas engineering. Contributed to major publications including China Credit Rating 2012: 20‑Year Review and Outlook and Macroeconomy, Bond Market, and Industry Outlook. Conducted research on sovereign credit rating methodologies and national debt‑capacity limits. Provided training and consulting services to local banks’ fixed‑income and financial‑markets departments.">参与信用评级项目，涉及行业涵盖电力、造纸、旅游、房地产、建筑、城投等行业。为三峡集团拟定内部评级方法并提供基础网络运营服务，涵盖电力、建筑和海外项目工程行业；编辑《中诚信研究2012：中国信用评级20年回顾与展望》和《中诚信研究2012：宏观经济、债券市场、行业分析与展望》；"主权信用评级"方法研究；国家负债能力上限研究；《企业扩张与融资》研究（已出版）；中诚信国际刊物《资产证券化手册》编撰；为地方银行的固定收益部和金融市场部提供业务培训和咨询服务。</div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date" data-zh="2006/08 - 2008/07" data-en="2006/08 - 2008/07">2006/08 - 2008/07</div>
                         <div class="timeline-title" data-zh="讲师" data-en="Lecturer">讲师</div>
                         <div class="timeline-desc" data-zh="青岛理工大学" data-en="Qingdao University of Technology">青岛理工大学</div>
-                        <div class="timeline-desc" data-zh="给本科生讲授《微观经济学》、《宏观经济学》、《技术经济学》、《运筹学》等主干课程；辅导毕业生的毕业论文和答辩。" data-en="To teach 'Microeconomics', 'Macroeconomics', 'Technical economics', 'Operations Research' courses;">给本科生讲授《微观经济学》、《宏观经济学》、《技术经济学》、《运筹学》等主干课程；辅导毕业生的毕业论文和答辩。</div>
+                        <div class="timeline-desc" data-zh="给本科生讲授《微观经济学》、《宏观经济学》、《技术经济学》、《运筹学》等主干课程；辅导毕业生的毕业论文和答辩。" data-en="Taught undergraduate courses including Microeconomics, Macroeconomics, Technical Economics, and Operations Research. Supervised graduation theses and oral defenses.">给本科生讲授《微观经济学》、《宏观经济学》、《技术经济学》、《运筹学》等主干课程；辅导毕业生的毕业论文和答辩。</div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date" data-zh="2001/08 - 2003/07" data-en="2001/08 - 2003/07">2001/08 - 2003/07</div>
                         <div class="timeline-title" data-zh="会计" data-en="Accountant">会计</div>
-                        <div class="timeline-desc" data-zh="农业银行陕西分行" data-en="Agricultural Bank of China">农业银行陕西分行</div>
-                        <div class="timeline-desc" data-zh="主要负责对公业务，包括支票审核入账、企业对账、重要空白凭证领取和销售、大额现金入库等。" data-en="Mainly responsible for corporate business, including check note reviewing and booking, important blank voucher receipt and sales, large cash storage, etc.">主要负责对公业务，包括支票审核入账、企业对账、重要空白凭证领取和销售、大额现金入库等。</div>
+                        <div class="timeline-desc" data-zh="农业银行陕西分行" data-en="Agricultural Bank of China, Shaanxi Branch">农业银行陕西分行</div>
+                        <div class="timeline-desc" data-zh="主要负责对公业务，包括支票审核入账、企业对账、重要空白凭证领取和销售、大额现金入库等。" data-en="Managed corporate banking operations including check verification, account reconciliation, voucher management, and large‑value cash handling.">主要负责对公业务，包括支票审核入账、企业对账、重要空白凭证领取和销售、大额现金入库等。</div>
                     </div>
                 </div>
+            </section>
+
+            <!-- 投资与咨询经历 -->
+            <section class="section">
+                <h2 class="section-title" data-zh="投资与咨询经历" data-en="Investment & Advisory Experience">投资与咨询经历</h2>
+                <ul class="publication-list">
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="（中文待补充）" data-en="Since 2021, engaged in interest‑rate bond investment and macroeconomic research for small banks.">（中文待补充）</div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="（中文待补充）" data-en="Currently advising nearly 10 financial institutions, with AUM exceeding RMB 3 billion.">（中文待补充）</div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="（中文待补充）" data-en="Delivered strong investment performance: average annualized return ≥ 4.5%, with top performance exceeding 5%.">（中文待补充）</div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 研究项目 -->
+            <section class="section">
+                <h2 class="section-title" data-zh="研究项目" data-en="Research Projects">研究项目</h2>
+                <ul class="publication-list">
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="甘肃省物流业发展规划（2005）" data-en="Development Plan for the Logistics Industry of Gansu Province – Lead Author (2005)">甘肃省物流业发展规划（2005）</div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="中国消费问题研究（2009）" data-en="Research on China’s Consumption Issues – Renmin University Project (2009)">中国消费问题研究（2009）</div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="贵阳市生态城发展规划（2009）" data-en="Eco‑City Development Plan for Guiyang City – Principal Writer (2009)">贵阳市生态城发展规划（2009）</div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="企业扩张与公司融资（2008；2018出版）" data-en="Enterprise Expansion and Corporate Financing – Advisor‑led project (2008; published 2018)">企业扩张与公司融资（2008；2018出版）</div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="常规研究报告：债券市场季报、信用利差研究、宏观分析等" data-en="Regular research reports: bond‑market quarterly reports, credit‑spread studies, macroeconomic analyses">常规研究报告：债券市场季报、信用利差研究、宏观分析等</div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="三峡集团内部评级方法项目" data-en="Internal rating methodology projects for China Three Gorges Group">三峡集团内部评级方法项目</div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="中诚信国际行业评级方法体系" data-en="Industry rating methodology series for China Chengxin International">中诚信国际行业评级方法体系</div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="北京泰德行业与宏观报告统筹" data-en="Oversight of all industry and macroeconomic reports at Beijing Taide">北京泰德行业与宏观报告统筹</div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="评级方法、评分卡与流程的开发与修订" data-en="Development and revision of rating methodologies, scorecards, and rating processes">评级方法、评分卡与流程的开发与修订</div>
+                    </li>
+                </ul>
             </section>
 
             <!-- 文章发表 -->
@@ -412,36 +446,50 @@
                 <h2 class="section-title" data-zh="文章发表" data-en="Publications">文章发表</h2>
                 <ul class="publication-list">
                     <li class="publication-item">
-                        <div class="publication-title" data-zh="《企业扩张与融资》" data-en="'Enterprise Expansion and Financing'">《企业扩张与融资》</div>
+                        <div class="publication-title" data-zh="《企业扩张与融资》" data-en="Enterprise Expansion and Corporate Financing">《企业扩张与融资》</div>
                         <div class="publication-meta" data-zh="已出版" data-en="Published">已出版</div>
                     </li>
                     <li class="publication-item">
-                        <div class="publication-title" data-zh="《中诚信研究2012：中国信用评级20年回顾与展望》" data-en="'CCXI Research 2012: 20 Years Review and Outlook of China Credit Rating'">《中诚信研究2012：中国信用评级20年回顾与展望》</div>
+                        <div class="publication-title" data-zh="《中诚信研究2012：中国信用评级20年回顾与展望》" data-en="China Credit Rating 2012: 20‑Year Review and Outlook">《中诚信研究2012：中国信用评级20年回顾与展望》</div>
                         <div class="publication-meta" data-zh="编辑" data-en="Editor">编辑</div>
                     </li>
                     <li class="publication-item">
-                        <div class="publication-title" data-zh="《中诚信研究2012：宏观经济、债券市场、行业分析与展望》" data-en="'CCXI Research 2012: Macro Economy, Bond Market, Industry Analysis and Outlook'">《中诚信研究2012：宏观经济、债券市场、行业分析与展望》</div>
+                        <div class="publication-title" data-zh="《中诚信研究2012：宏观经济、债券市场、行业分析与展望》" data-en="Macroeconomy, Bond Market, and Industry Outlook">《中诚信研究2012：宏观经济、债券市场、行业分析与展望》</div>
                         <div class="publication-meta" data-zh="编辑" data-en="Editor">编辑</div>
                     </li>
                     <li class="publication-item">
-                        <div class="publication-title" data-zh="《资产证券化手册》" data-en="'Asset Securitization Handbook'">《资产证券化手册》</div>
-                        <div class="publication-meta" data-zh="中诚信国际刊物编撰" data-en="CCXI Publication">中诚信国际刊物编撰</div>
+                        <div class="publication-title" data-zh="《资产证券化手册》" data-en="Asset Securitization Handbook">《资产证券化手册》</div>
+                        <div class="publication-meta" data-zh="中诚信国际刊物编撰" data-en="Contributor">中诚信国际刊物编撰</div>
                     </li>
-                </ul>
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="《中国低消费率与家庭支出的阶段性特征》" data-en="“China’s Low Consumption Rate and Stage‑Based Household Expenditure”">《中国低消费率与家庭支出的阶段性特征》</div>
+                        <div class="publication-meta" data-zh="兰州学刊，2010" data-en="Lanzhou Academic Journal, 2010">兰州学刊，2010</div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="《家庭支出的阶段性特征、代际支出周期与中国消费不足》" data-en="“Stage‑Based Household Expenditure, Intergenerational Spending Cycles, and Insufficient Consumption in China”">《家庭支出的阶段性特征、代际支出周期与中国消费不足》</div>
+                        <div class="publication-meta" data-zh="当代财经（CSSCI），2010" data-en="Contemporary Finance & Economics (CSSCI), 2010">当代财经（CSSCI），2010</div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="《经济调整中的社会福利体系建设》" data-en="“Building China’s Social Welfare System During Economic Adjustment”">《经济调整中的社会福利体系建设》</div>
+                        <div class="publication-meta" data-zh="理论视野，2009" data-en="Theoretical Horizon, 2009">理论视野，2009</div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="publication-title" data-zh="其他：城市化、区域发展、拍卖理论、企业规模经济等（2005–2006）" data-en="Additional provincial‑level publications on urbanization, regional development, auction theory, and firm‑size economics (2005–2006)">其他：城市化、区域发展、拍卖理论、企业规模经济等（2005–2006）</div>
+                    </li>
+        </ul>
             </section>
 
             <!-- 专长 -->
             <section class="section">
                 <h2 class="section-title" data-zh="专长" data-en="Skills & Expertise">专长</h2>
                 <div class="skills-grid">
-                    <div class="skill-item" data-zh="信用评级" data-en="Credit Rating">信用评级</div>
-                    <div class="skill-item" data-zh="债券发行" data-en="Bond Issuance">债券发行</div>
-                    <div class="skill-item" data-zh="市场推广" data-en="Marketing">市场推广</div>
-                    <div class="skill-item" data-zh="客户关系管理" data-en="Customer Relationship Management">客户关系管理</div>
-                    <div class="skill-item" data-zh="金融数据分析" data-en="Financial Data Analysis">金融数据分析</div>
-                    <div class="skill-item" data-zh="项目评估" data-en="Project Evaluation">项目评估</div>
-                    <div class="skill-item" data-zh="风险管理" data-en="Risk Management">风险管理</div>
-                    <div class="skill-item" data-zh="业务培训" data-en="Business Training">业务培训</div>
+                    <div class="skill-item" data-zh="信用评级" data-en="Credit rating methodology development">信用评级</div>
+                    <div class="skill-item" data-zh="债券发行" data-en="Bond issuance & fixed‑income market operations">债券发行</div>
+                    <div class="skill-item" data-zh="利率债投资" data-en="Interest‑rate bond investment">利率债投资</div>
+                    <div class="skill-item" data-zh="宏观与行业研究" data-en="Macroeconomic and industry research">宏观与行业研究</div>
+                    <div class="skill-item" data-zh="金融数据系统" data-en="Financial data systems & vendor management">金融数据系统</div>
+                    <div class="skill-item" data-zh="培训与团队领导" data-en="Corporate training and team leadership">培训与团队领导</div>
+                    <div class="skill-item" data-zh="双语沟通" data-en="Bilingual communication (Chinese & English)">双语沟通</div>
                 </div>
             </section>
         </div>
