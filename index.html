@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Vitae | Jian Mu</title>
@@ -234,6 +231,30 @@
             display: none;
         }
 
+        /* Subsection heading inside Skills (e.g. course certificates) */
+        .subsection-title {
+            font-size: 1.2em;
+            color: #667eea;
+            margin: 28px 0 5px;
+            font-weight: 600;
+        }
+
+        /* School seals in Education: uniform size, vertically aligned with degree titles */
+        .edu-logo {
+            height: 46px;
+            width: 46px;
+            object-fit: contain;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        /* CMC designation logo (per CMC-Canada logo usage guidelines) */
+        .cmc-logo {
+            width: 140px;
+            height: auto;
+            margin: 8px 0 4px;
+        }
+
         @media (max-width: 768px) {
             .header {
                 padding: 30px 20px;
@@ -291,13 +312,16 @@
                         <span>Male</span>
                     </div>
                     <div class="contact-item">
+                        <strong>Email</strong>
+                        <a href="mailto:mujianca@gmail.com">mujianca@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
                         <strong>GitHub</strong>
                         <a href="https://github.com/newmymujian-hash" target="_blank">newmymujian-hash</a>
                     </div>
                     <div class="contact-item">
                         <strong>LinkedIn</strong>
-                        <a href="https://www.linkedin.com/in/jian-mu-ph-d-54769976"
-                            target="_blank">www.linkedin.com/in/jian-mu-ph-d-54769976</a>
+                        <a href="https://www.linkedin.com/in/jian-mu-ph-d-54769976" target="_blank">www.linkedin.com/in/jian-mu-ph-d-54769976</a>
                     </div>
                 </div>
             </section>
@@ -307,19 +331,28 @@
                 <h2 class="section-title">Education</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-title">PhD in Economics</div>
+                        <div class="timeline-title"><img class="edu-logo" src="images/logo-ruc.svg" alt="Renmin University of China seal">PhD in Economics</div>
                         <div class="timeline-desc">Renmin University of China</div>
                         <div class="timeline-desc">Dissertation: Transformation of Consumption Patterns in China’s
                             Marketization Process (2011)</div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-title">Master’s in Economics</div>
+                        <div class="timeline-title"><img class="edu-logo" src="images/logo-nwnu.png" alt="Northwest Normal University seal">Master’s in Economics</div>
                         <div class="timeline-desc">Northwest Normal University</div>
                         <div class="timeline-desc">Thesis awarded Outstanding Master’s Thesis (2006)</div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-title">Bachelor of Economics</div>
+                        <div class="timeline-title"><img class="edu-logo" src="images/logo-xjtu.png" alt="Xi'an Jiaotong University seal">Bachelor of Economics</div>
                         <div class="timeline-desc">Xi’an Jiaotong University</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">Certified Management Consultant (CMC)</div>
+                        <div class="timeline-desc"><img class="cmc-logo" src="images/cmc-logo.png" alt="CMC — Certified Management Consultant designation logo"></div>
+                        <div class="timeline-desc">The Certified Management Consultant (CMC) designation is the
+                            profession’s only international certification mark, recognized in 43 countries. It
+                            represents a commitment to the highest standards of consulting and adherence to the
+                            ethical canons of the profession. In Canada the designation is administered by
+                            CMC-Canada and conferred by the provincial Institutes.</div>
                     </div>
                 </div>
             </section>
@@ -329,7 +362,16 @@
                 <h2 class="section-title">Work Experience</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-date">Nov 2022 – Present</div>
+                        <div class="timeline-date">Jun 2025 – Present</div>
+                        <div class="timeline-title">UnitedCloud — Information Officer
+                        </div>
+                        <div class="timeline-desc">Develop and assess the Chinese market, engage with small and
+                            medium‑sized enterprise (SME) clients in China, design risk‑management and rating systems
+                            tailored to Chinese SMEs, and provide clients with professional market intelligence and
+                            risk‑assessment information.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Nov 2022 – Dec 2024</div>
                         <div class="timeline-title">Guangzhou Philomax Credit Rating Co., Ltd. — Director of Marketing
                         </div>
                         <div class="timeline-desc">Lead marketing strategy for rating and consulting services; develop
@@ -377,7 +419,7 @@
                     <div class="timeline-item">
                         <div class="timeline-date">Mar 2011 – Jul 2014</div>
                         <div class="timeline-title">China Chengxin International Credit Rating Co., Ltd. — Senior
-                            Analyst, Rating & Research Department</div>
+                            Analyst, Rating &amp; Research Department</div>
                         <div class="timeline-desc">Participated in credit rating projects across power, paper, tourism,
                             real estate, construction, and LGFV sectors.</div>
                         <div class="timeline-desc">Developed internal rating methodologies for China Three Gorges Group
@@ -407,7 +449,7 @@
 
             <!-- Investment & Advisory Experience -->
             <section class="section">
-                <h2 class="section-title">Investment & Advisory Experience</h2>
+                <h2 class="section-title">Investment &amp; Advisory Experience</h2>
                 <ul class="publication-list tight-list">
                     <li class="publication-item">
                         <div class="publication-title">Since 2021, engaged in interest‑rate bond investment and
@@ -420,6 +462,13 @@
                     <li class="publication-item">
                         <div class="publication-title">Delivered strong investment performance: average annualized
                             return ≥ 4.5%, with top performance exceeding 5%.</div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="publication-title">During my time in Canada, I provided clients with internal
+                            consulting services that aligned with the standards of the North American CMC Association.
+                            I helped clients mitigate the regulatory risks associated with the Chinese government’s
+                            digital‑asset supervision introduced in early 2026. In addition, I proposed a compliant
+                            and sustainable pathway for expanding into the Chinese SME market.</div>
                     </li>
                 </ul>
             </section>
@@ -467,7 +516,7 @@
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-title">Methodologies & processes</div>
+                        <div class="timeline-title">Methodologies &amp; processes</div>
                         <div class="timeline-desc">Development and revision of rating methodologies, scorecards, and
                             rating processes</div>
                     </div>
@@ -488,7 +537,7 @@
                         <div class="timeline-date">2010</div>
                         <div class="timeline-title">“Stage‑Based Household Expenditure, Intergenerational Spending
                             Cycles, and Insufficient Consumption in China”</div>
-                        <div class="timeline-desc">Contemporary Finance & Economics (CSSCI)</div>
+                        <div class="timeline-desc">Contemporary Finance &amp; Economics (CSSCI)</div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">2009</div>
@@ -525,20 +574,34 @@
 
             <!-- Skills -->
             <section class="section">
-                <h2 class="section-title">Skills & Expertise</h2>
+                <h2 class="section-title">Skills &amp; Expertise</h2>
                 <div class="skills-grid">
                     <div class="skill-item">Credit rating methodology development</div>
-                    <div class="skill-item">Bond issuance & fixed‑income market operations</div>
+                    <div class="skill-item">Bond issuance &amp; fixed‑income market operations</div>
                     <div class="skill-item">Interest‑rate bond investment</div>
                     <div class="skill-item">Macroeconomic and industry research</div>
-                    <div class="skill-item">Financial data systems & vendor management</div>
+                    <div class="skill-item">Financial data systems &amp; vendor management</div>
                     <div class="skill-item">Corporate training and team leadership</div>
-                    <div class="skill-item">Bilingual communication (Chinese & English)</div>
+                    <div class="skill-item">Bilingual communication (Chinese &amp; English)</div>
+                </div>
+                <h3 class="subsection-title">Anthropic Online Course Certificates (2026)</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">AI Capabilities and Limitations</div>
+                    <div class="skill-item">AI Fluency for Educators</div>
+                    <div class="skill-item">AI Fluency for Small Businesses</div>
+                    <div class="skill-item">AI Fluency for Students</div>
+                    <div class="skill-item">AI Fluency: Framework &amp; Foundations</div>
+                    <div class="skill-item">Claude 101</div>
+                    <div class="skill-item">Claude Code 101</div>
+                    <div class="skill-item">Claude Code in Action</div>
+                    <div class="skill-item">Claude Platform 101</div>
+                    <div class="skill-item">Introduction to Model Context Protocol</div>
+                    <div class="skill-item">Teaching AI Fluency</div>
                 </div>
             </section>
         </div>
     </div>
 
-</body>
 
-</html>
+
+</body></html>
