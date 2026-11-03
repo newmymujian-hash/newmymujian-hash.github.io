@@ -8,21 +8,36 @@
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<header class="topbar">
-  <div class="topbar-inner">
+<div class="shell">
+  <aside class="sidebar">
     <a class="wordmark" href="/">alex</a>
-    <nav class="mainnav">
-      <a href="/news/">News</a><a href="/papers/">Papers</a><a href="/insights/">Insights</a><a href="/consulting/">Consulting</a><a href="/tutoring/">Tutoring</a><a href="/about/">About</a>
+    <form class="searchbox" id="searchForm" role="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="searchInput" type="search" placeholder="Search" aria-label="Search this site">
+    </form>
+    <nav class="sidenav">
+      <a href="/" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/></svg>Home</a>
+      <a href="/news/" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 8h3v9a2 2 0 0 1-2 2"/><path d="M7 9h7M7 13h7"/></svg>News</a>
+      <a href="/papers/" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg>Papers</a>
+      <a href="/insights/" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-8M21 20H3"/></svg>Insights</a>
+      <a href="/consulting/" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V6a3 3 0 0 1 6 0v2M3 13h18"/></svg>Consulting</a>
+      <a href="/tutoring/" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 6c-2-1.5-4.5-2-8-2v14c3.5 0 6 .5 8 2 2-1.5 4.5-2 8-2V4c-3.5 0-6 .5-8 2z"/><path d="M12 6v14"/></svg>Tutoring</a>
+      <a href="/about/" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-5.5 8-5.5s6.5 1.5 8 5.5"/></svg>About</a>
     </nav>
-  </div>
-</header>
-<main>
-
+    <div class="side-div"></div>
+    <div class="side-label">Featured</div>
+    <a class="side-feat" href="/papers/dissertation/">The dissertation, in English</a>
+    <a class="side-feat" href="/insights/us-economic-cycle-spectrum/">Where are we in the U.S. cycle?</a>
+    <div class="side-foot">© 2026 Jian Mu (Alex)<br>Calgary, Canada</div>
+  </aside>
+  <div class="maincol">
+    <main>
+    
 <article class="article">
-  <div class="kicker">Papers</div>
+  <div class="pub-line"><span class="badge badge-papers">P</span>In Papers by Jian Mu · Nov 3, 2026</div>
   <h1>Restructuring the Regional Development Model</h1>
   <p class="standfirst">Journal of Hexi University, 2005. Full English translation available.</p>
-  <div class="byline">Jian Mu (Alex) · Nov 3, 2026 · 1 min read</div>
+  <div class="byline"><span class="spark">✦</span> 1 min read</div>
   <div class="prose"><p><strong>Journal of Hexi University (河西学院学报), 2005.</strong></p>
 <p>An early paper on how regional development models in western China needed to be
 restructured — a theme I returned to in later work on regional equilibrium and
@@ -32,12 +47,16 @@ agglomeration.</p>
   <div class="article-foot"><a href="/papers/">← More in Papers</a></div>
 </article>
 
-</main>
-<footer class="sitefoot">
-  <div class="foot-inner">
-    <span>© 2026 Jian Mu (Alex) · Calgary, Canada</span>
-    <span class="foot-links"><a href="/news/">News</a><a href="/papers/">Papers</a><a href="/insights/">Insights</a><a href="/consulting/">Consulting</a><a href="/tutoring/">Tutoring</a><a href="/about/">About</a></span>
+    </main>
+    <footer class="sitefoot">alex — a personal knowledge site · <a href="/about/">About</a> · <a href="/index.xml">RSS</a></footer>
   </div>
-</footer>
+</div>
+<script>
+document.getElementById('searchForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var q = document.getElementById('searchInput').value.trim();
+  if (q) { window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent('site:newmymujian-hash.github.io ' + q); }
+});
+</script>
 </body>
 </html>
