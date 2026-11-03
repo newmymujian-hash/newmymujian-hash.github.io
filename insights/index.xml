@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Insights on alex</title>
+		<link>https://newmymujian-hash.github.io/insights/</link>
+		<description>Recent content in Insights on alex</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://newmymujian-hash.github.io/insights/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Where Are We in the U.S. Economic Cycle? A Spectral Decomposition</title>
+				<link>https://newmymujian-hash.github.io/insights/us-economic-cycle-spectrum/</link>
+				<pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>https://newmymujian-hash.github.io/insights/us-economic-cycle-spectrum/</guid>
+				<description>&lt;p&gt;Economic cycles are not one wave but several, superimposed. In Schumpeter&amp;rsquo;s nesting,&#xA;one long Kondratieff wave contains roughly six Juglar cycles and eighteen Kitchin&#xA;cycles; when the components peak together they amplify, and when they offset, they&#xA;cancel. This note applies that framework to the longest U.S. samples available —&#xA;industrial production (1919–2026) and real GDP (to 2026 Q3) — using Fourier&#xA;decomposition with harmonic regression on trailing windows as the primary phase&#xA;estimator, cross-checked with wavelet analysis.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
