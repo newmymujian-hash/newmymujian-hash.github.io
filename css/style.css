@@ -127,3 +127,10 @@ a.tab:hover{color:#fff}
   .article h1{font-size:29px}
   .grid{grid-template-columns:1fr}
 }
+
+/* news board items: compact titles/notes, hairline under the note, airy item gaps */
+.news-board .prose h3{font-size:16.5px;line-height:1.35;font-weight:700;margin:24px 0 5px}
+.news-board .prose h2 + h3{margin-top:12px}
+.news-board .prose h3 a{text-decoration:none}
+.news-board .prose h3 a:hover{text-decoration:underline;text-underline-offset:3px}
+.news-board .prose h3 + p{font-size:14px;line-height:1.5;color:var(--gray);margin:0 0 6px;padding-bottom:18px;border-bottom:1px solid var(--line-soft)}
