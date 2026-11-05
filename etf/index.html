@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ETF Flows · alex</title>
+<meta name="description" content="Daily sector ETF fund flows for China A-shares and the U.S. — net inflows estimated from shares outstanding and NAV after each close.">
+<link rel="stylesheet" href="/css/style.css">
+<script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\)"]],displayMath:[["$$","$$"],["\\[","\\]"]]}};</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <a class="wordmark" href="/">alex</a>
+    <form class="searchbox" id="searchForm" role="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="searchInput" type="search" placeholder="Search" aria-label="Search this site">
+    </form>
+    <nav class="sidenav">
+      <a href="/" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/></svg>Home</a>
+      <a href="/news/" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 8h3v9a2 2 0 0 1-2 2"/><path d="M7 9h7M7 13h7"/></svg>News</a>
+      <a href="/papers/" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg>Papers</a>
+      <a href="/insights/" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-8M21 20H3"/></svg>Insights</a>
+      <a href="/etf/" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8.5c2.6-2.4 5.2-2.4 7.8 0s5.2 2.4 7.8 0 3.4-2 4.4-.8"/><path d="M2 15.5c2.6-2.4 5.2-2.4 7.8 0s5.2 2.4 7.8 0 3.4-2 4.4-.8"/></svg>ETF Flows</a>
+      <a href="/consulting/" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V6a3 3 0 0 1 6 0v2M3 13h18"/></svg>Consulting</a>
+      <a href="/tutoring/" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 6c-2-1.5-4.5-2-8-2v14c3.5 0 6 .5 8 2 2-1.5 4.5-2 8-2V4c-3.5 0-6 .5-8 2z"/><path d="M12 6v14"/></svg>Tutoring</a>
+      <a href="/about/" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-5.5 8-5.5s6.5 1.5 8 5.5"/></svg>About</a>
+    </nav>
+    <div class="side-div"></div>
+    <div class="side-label">Featured</div>
+    <a class="side-feat" href="/papers/dissertation/">The dissertation, in English</a>
+    <a class="side-feat" href="/insights/us-economic-cycle-spectrum/">Where are we in the U.S. cycle?</a>
+    <div class="side-foot">© 2026 Jian Mu (Alex)<br>Calgary, Canada</div>
+  </aside>
+  <div class="maincol">
+    <main>
+    
+<div class="tabs"><span class="tab active">ETF Flows</span></div>
+<section class="feed">
+  <h1 class="page-title">ETF Flows</h1>
+  <p class="page-sub">Daily sector ETF fund flows for China A-shares and the U.S. — net inflows estimated from shares outstanding and NAV after each close.</p>
+  <p class="etf-status" id="etf-status">Loading the latest post-close data…</p>
+
+  <div class="etf-market" id="china">
+    <div class="etf-head">
+      <h2>China A-Share Sector ETFs</h2>
+      <div class="etf-meta" id="cn-meta"></div>
+    </div>
+    <div class="etf-stats" id="cn-stats"></div>
+    <h3 class="etf-chart-title">Net flow by sector — latest trading day</h3>
+    <div class="etf-chart" id="cn-bar"></div>
+    <div class="etf-winrow">
+      <h3 class="etf-chart-title">Cumulative net flow</h3>
+      <div class="etf-win" data-market="cn">
+        <button data-win="21" class="active">1M</button><button data-win="63">3M</button><button data-win="ytd">YTD</button><button data-win="all">1Y</button>
+      </div>
+    </div>
+    <div class="etf-chart etf-chart-cum" id="cn-cum"></div>
+    <h3 class="etf-chart-title">Daily net flow — last 20 trading days</h3>
+    <div class="heat-wrap" id="cn-heat"></div>
+    <h3 class="etf-chart-title">ETFs in each sector — latest day</h3>
+    <div id="cn-table"></div>
+  </div>
+
+  <div class="etf-market" id="us">
+    <div class="etf-head">
+      <h2>U.S. Sector ETFs</h2>
+      <div class="etf-meta" id="us-meta"></div>
+    </div>
+    <div class="etf-stats" id="us-stats"></div>
+    <h3 class="etf-chart-title">Net flow by sector — latest trading day</h3>
+    <div class="etf-chart" id="us-bar"></div>
+    <div class="etf-winrow">
+      <h3 class="etf-chart-title">Cumulative net flow</h3>
+      <div class="etf-win" data-market="us">
+        <button data-win="21" class="active">1M</button><button data-win="63">3M</button><button data-win="ytd">YTD</button><button data-win="all">1Y</button>
+      </div>
+    </div>
+    <div class="etf-chart etf-chart-cum" id="us-cum"></div>
+    <h3 class="etf-chart-title">Daily net flow — last 20 trading days</h3>
+    <div class="heat-wrap" id="us-heat"></div>
+    <h3 class="etf-chart-title">ETFs in each sector — latest day</h3>
+    <div id="us-table"></div>
+  </div>
+
+  <p class="etf-note">◆ Extreme flow day: |daily net flow| above the sector's own 1-year 95th percentile. Heatmap and chart values are in billions of the market currency.</p>
+  <div class="prose etf-prose"><h2 id="how-to-read-this-page">How to read this page</h2>
+<p>Each figure is the <strong>estimated net flow into sector ETFs on the most recent trading day</strong>, in the market&rsquo;s own currency. Red is a net inflow, green a net outflow — the A-share market convention, applied to both markets here so the two panels read the same way.</p>
+<p>The ◆ marker flags an <strong>extreme flow day</strong>: a sector whose daily net flow, in absolute value, exceeds the 95th percentile of its own daily flows over the past year.</p>
+<h2 id="method-and-sources">Method and sources</h2>
+<p>Net flow is self-calculated as <strong>(shares outstanding today − shares outstanding yesterday) × today&rsquo;s NAV</strong>, summed over the ETFs in each sector. It is an estimate of primary-market creations and redemptions, not exchange turnover, and it can differ from commercial data vendors&rsquo; figures, which use their own conventions.</p>
+<ul>
+<li><strong>China A-shares:</strong> shares from the SSE / SZSE daily ETF scale reports (T-day close); NAV from Eastmoney. Data for trading day T is finalised on the morning of T+1.</li>
+<li><strong>United States:</strong> shares and NAV from issuer daily files (State Street SPDR; VanEck for SMH). U.S. shares dated T conventionally reflect creation/redemption orders through T−1.</li>
+<li><strong>Change %</strong> is the daily change reported in the source data (for China A-share ETFs this is the NAV change).</li>
+<li>ETF labels on this page are English renderings of the exchange short names; the codes are authoritative.</li>
+</ul>
+<p><em>Data is compiled automatically after each market close and is shown for information only. It is not investment advice.</em></p>
+</div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<script src="/js/etf-dashboard.js"></script>
+
+    </main>
+    <footer class="sitefoot">alex — a personal knowledge site · <a href="/about/">About</a> · <a href="/index.xml">RSS</a></footer>
+  </div>
+</div>
+<script>
+document.getElementById('searchForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var q = document.getElementById('searchInput').value.trim();
+  if (q) { window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent('site:newmymujian-hash.github.io ' + q); }
+});
+</script>
+</body>
+</html>

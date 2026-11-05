@@ -136,3 +136,42 @@ a.tab:hover{color:var(--text)}
 .news-board .prose h3 + p{font-size:14px;line-height:1.5;color:var(--gray);margin:0 0 6px;padding-bottom:18px;border-bottom:1px solid var(--line-soft)}
 
 .news-board .prose h3 a:hover{color:var(--accent-hover)}
+
+/* ETF Flows (added 2026-11-05) */
+.pos{color:#B3402A}
+.neg{color:#3E7C59}
+.flow-feed{margin-top:6px}
+.flow-total{font-size:27px;font-weight:800;letter-spacing:-.3px;color:var(--text);margin:2px 0 4px}
+.flow-card p{color:var(--gray);font-size:13.5px}
+.flow-date{font-size:12.5px;color:var(--faint);margin-top:6px}
+.etf-status{color:var(--gray);font-size:14px}
+.etf-market{margin-top:38px;border-top:1px solid var(--line);padding-top:8px}
+.etf-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.etf-head h2{font-size:23px;font-weight:800;color:var(--text);letter-spacing:-.3px;margin:14px 0 4px}
+.etf-meta{font-size:13px;color:var(--faint)}
+.etf-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0 6px}
+.etf-stat{background:var(--panel);border-radius:8px;padding:12px 14px}
+.etf-stat-label{font-size:12px;color:var(--gray);margin-bottom:4px}
+.etf-stat-value{font-size:21px;font-weight:800;color:var(--text);line-height:1.25}
+.etf-stat-value.sm{font-size:14.5px;font-weight:700}
+.etf-chart-title{font-size:15.5px;font-weight:700;color:var(--text);margin:24px 0 6px}
+.etf-chart{width:100%;height:330px}
+.etf-chart-cum{height:360px}
+.etf-winrow{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.etf-win button{font-family:var(--sans);font-size:12.5px;color:var(--gray);background:none;border:1px solid var(--line);border-radius:999px;padding:3px 11px;margin-left:6px;cursor:pointer}
+.etf-win button.active{color:#fff;background:var(--accent);border-color:var(--accent)}
+.heat-wrap{overflow-x:auto;margin-bottom:6px}
+table.heat{border-collapse:collapse;font-size:11.5px;white-space:nowrap}
+table.heat th,table.heat td{padding:4px 6px;text-align:right;border:1px solid var(--line-soft)}
+table.heat thead th{color:var(--gray);font-weight:600}
+table.heat tbody th{text-align:left;color:var(--text);font-weight:600;background:var(--bg)}
+table.heat td.heat-na{color:var(--faint);text-align:center}
+table.etf-table{border-collapse:collapse;width:100%;font-size:13.5px;margin-bottom:8px}
+table.etf-table th,table.etf-table td{padding:6px 8px;border-bottom:1px solid var(--line-soft);text-align:right}
+table.etf-table th:first-child,table.etf-table td:first-child,table.etf-table th:nth-child(2),table.etf-table td:nth-child(2){text-align:left}
+table.etf-table thead th{color:var(--gray);font-weight:600;font-size:12.5px}
+tr.etf-sector-row td{background:var(--panel);font-weight:700;color:var(--text);text-align:left}
+tr.etf-sector-row td.pos,tr.etf-sector-row td.neg{text-align:right}
+.badge-extreme{font-size:11px;font-weight:700;color:#B3402A;border:1px solid #B3402A;border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:1px}
+.etf-note{font-size:12.5px;color:var(--faint);margin-top:20px}
+.etf-prose{margin-top:10px}
